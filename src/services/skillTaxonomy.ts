@@ -2,7 +2,8 @@ import path from 'path';
 import fs from 'fs';
 import { SkillConfig, BktParams } from '../models/SkillConfig';
 
-const DATA_DIR = path.resolve(__dirname, '../../../lms-project-backend/data');
+// Use bundled data (decision-engine/data). Works for both monorepo dev and Railway deploy.
+const DATA_DIR = path.resolve(__dirname, '../../data');
 const BIOLOGY_SPEC = path.join(DATA_DIR, 'aqa_biology_spec_full_hierarchy.json');
 const PHYSICS_SPEC = path.join(DATA_DIR, 'aqa_physics_spec_full_hierarchy.json');
 

@@ -1,0 +1,241 @@
+{
+  "examBoard": "AQA",
+  "qualification": "GCSE",
+  "subject": "Physics",
+  "source_file": "AQA-8463-SP-2016.pdf",
+  "source_citation": "AQA Physics 8463 Specification",
+  "topics": [
+    {
+      "topicName": "Energy",
+      "topicCode": "4.1",
+      "overview": "Energy stores and transfers; kinetic, gravitational potential and elastic potential energy; power; conservation and dissipation of energy; efficiency.",
+      "subtopics": [
+        {
+          "subtopicName": "Energy stores and systems",
+          "specPoints": [
+            {
+              "code": "4.1.1.1",
+              "statement": "Describe energy stores and systems; describe changes in energy storage for common situations.",
+              "keywords": ["energy store", "system", "kinetic", "potential", "thermal"],
+              "AO": "AO1",
+              "source": "AQA-8463-SP-2016"
+            },
+            {
+              "code": "4.1.1.2",
+              "statement": "Calculate kinetic energy, elastic potential energy and gravitational potential energy using Ek = ½mv², Ee = ½ke², Ep = mgh.",
+              "keywords": ["kinetic energy", "Ek", "elastic potential", "g.p.e.", "Ep", "mgh"],
+              "AO": "AO2",
+              "source": "AQA-8463-SP-2016"
+            },
+            {
+              "code": "4.1.1.3",
+              "statement": "Calculate thermal energy change using ΔE = mcΔθ; understand specific heat capacity.",
+              "keywords": ["thermal energy", "specific heat capacity", "mcΔθ"],
+              "AO": "AO2",
+              "source": "AQA-8463-SP-2016"
+            },
+            {
+              "code": "4.1.1.4",
+              "statement": "Define power as rate of energy transfer; use P = E/t and P = W/t.",
+              "keywords": ["power", "watt", "energy transferred", "work done"],
+              "AO": "AO1",
+              "source": "AQA-8463-SP-2016"
+            }
+          ]
+        },
+        {
+          "subtopicName": "Conservation and dissipation of energy",
+          "specPoints": [
+            {
+              "code": "4.1.2.1",
+              "statement": "Energy cannot be created or destroyed; describe energy transfers and dissipation in closed systems.",
+              "keywords": ["conservation", "dissipation", "wasted", "closed system"],
+              "AO": "AO1",
+              "source": "AQA-8463-SP-2016"
+            },
+            {
+              "code": "4.1.2.2",
+              "statement": "Calculate efficiency using useful output energy / total input energy or useful power / total power.",
+              "keywords": ["efficiency", "percentage", "useful", "wasted"],
+              "AO": "AO2",
+              "source": "AQA-8463-SP-2016"
+            }
+          ]
+        },
+        {
+          "subtopicName": "National and global energy resources",
+          "specPoints": [
+            {
+              "code": "4.1.3",
+              "statement": "Describe renewable and non-renewable energy resources; compare uses and environmental impact.",
+              "keywords": ["fossil fuel", "renewable", "nuclear", "solar", "wind", "hydro"],
+              "AO": "AO1",
+              "source": "AQA-8463-SP-2016"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topicName": "Electricity",
+      "topicCode": "4.2",
+      "overview": "Charge, current, potential difference and resistance; Ohm's law; series and parallel circuits; mains electricity; power and energy transfer.",
+      "subtopics": [
+        {
+          "subtopicName": "Current, potential difference and resistance",
+          "specPoints": [
+            {
+              "code": "4.2.1.1",
+              "statement": "Draw and interpret circuit diagrams using standard symbols.",
+              "keywords": ["circuit", "symbol", "diagram"],
+              "AO": "AO1",
+              "source": "AQA-8463-SP-2016"
+            },
+            {
+              "code": "4.2.1.2",
+              "statement": "Electric current is flow of charge; Q = It.",
+              "keywords": ["current", "charge", "coulomb", "ampere"],
+              "AO": "AO1",
+              "source": "AQA-8463-SP-2016"
+            },
+            {
+              "code": "4.2.1.3",
+              "statement": "Current depends on resistance and potential difference; V = IR.",
+              "keywords": ["potential difference", "voltage", "resistance", "ohm", "V=IR"],
+              "AO": "AO2",
+              "source": "AQA-8463-SP-2016"
+            },
+            {
+              "code": "4.2.1.4",
+              "statement": "Explain ohmic and non-ohmic conductors; resistance of lamps, diodes, thermistors, LDRs.",
+              "keywords": ["ohmic", "thermistor", "LDR", "filament lamp", "diode"],
+              "AO": "AO2",
+              "source": "AQA-8463-SP-2016"
+            }
+          ]
+        },
+        {
+          "subtopicName": "Series and parallel circuits",
+          "specPoints": [
+            {
+              "code": "4.2.2",
+              "statement": "Describe series and parallel circuits; same current in series, same pd in parallel; Rtotal = R1 + R2 for series.",
+              "keywords": ["series", "parallel", "current", "potential difference", "resistance"],
+              "AO": "AO2",
+              "source": "AQA-8463-SP-2016"
+            }
+          ]
+        },
+        {
+          "subtopicName": "Domestic uses and safety",
+          "specPoints": [
+            {
+              "code": "4.2.3.1",
+              "statement": "Mains electricity is ac; UK supply 230V, 50Hz; explain difference between dc and ac.",
+              "keywords": ["mains", "ac", "dc", "230V", "50Hz"],
+              "AO": "AO1",
+              "source": "AQA-8463-SP-2016"
+            },
+            {
+              "code": "4.2.3.2",
+              "statement": "Live, neutral, earth wires; colour coding; safety of mains electricity.",
+              "keywords": ["live", "neutral", "earth", "brown", "blue", "green-yellow"],
+              "AO": "AO1",
+              "source": "AQA-8463-SP-2016"
+            }
+          ]
+        },
+        {
+          "subtopicName": "Energy transfers",
+          "specPoints": [
+            {
+              "code": "4.2.4.1",
+              "statement": "Power = VI and P = I²R; relate power to energy transfer.",
+              "keywords": ["power", "voltage", "current", "P=VI"],
+              "AO": "AO2",
+              "source": "AQA-8463-SP-2016"
+            },
+            {
+              "code": "4.2.4.2",
+              "statement": "Energy transferred E = Pt and E = QV; power ratings of appliances.",
+              "keywords": ["energy", "power", "time", "charge", "potential difference"],
+              "AO": "AO2",
+              "source": "AQA-8463-SP-2016"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topicName": "Particle model of matter",
+      "topicCode": "4.3",
+      "overview": "Density; changes of state; internal energy; specific heat capacity; specific latent heat; particle motion and pressure in gases.",
+      "subtopics": [
+        {
+          "subtopicName": "Density and changes of state",
+          "specPoints": [
+            {
+              "code": "4.3.1.1",
+              "statement": "Density ρ = m/V; particle model explains states of matter and density differences.",
+              "keywords": ["density", "mass", "volume", "particle model", "solid", "liquid", "gas"],
+              "AO": "AO1",
+              "source": "AQA-8463-SP-2016"
+            },
+            {
+              "code": "4.3.1.2",
+              "statement": "Mass is conserved in changes of state; physical vs chemical changes.",
+              "keywords": ["melt", "freeze", "boil", "evaporate", "condense", "sublimate", "conserved"],
+              "AO": "AO1",
+              "source": "AQA-8463-SP-2016"
+            }
+          ]
+        },
+        {
+          "subtopicName": "Internal energy and energy transfers",
+          "specPoints": [
+            {
+              "code": "4.3.2.1",
+              "statement": "Internal energy is total kinetic and potential energy of particles; heating increases it.",
+              "keywords": ["internal energy", "kinetic", "potential", "particles", "heating"],
+              "AO": "AO1",
+              "source": "AQA-8463-SP-2016"
+            },
+            {
+              "code": "4.3.2.2",
+              "statement": "ΔE = mcΔθ; specific heat capacity; temperature change depends on mass, material, energy input.",
+              "keywords": ["specific heat capacity", "thermal energy", "temperature change"],
+              "AO": "AO2",
+              "source": "AQA-8463-SP-2016"
+            },
+            {
+              "code": "4.3.2.3",
+              "statement": "Specific latent heat; E = mL; fusion and vaporisation; heating/cooling graphs.",
+              "keywords": ["latent heat", "fusion", "vaporisation", "change of state"],
+              "AO": "AO2",
+              "source": "AQA-8463-SP-2016"
+            }
+          ]
+        },
+        {
+          "subtopicName": "Particle model and pressure",
+          "specPoints": [
+            {
+              "code": "4.3.3.1",
+              "statement": "Gas molecules in random motion; temperature relates to average kinetic energy; pressure at constant volume.",
+              "keywords": ["gas", "random motion", "temperature", "pressure", "kinetic energy"],
+              "AO": "AO2",
+              "source": "AQA-8463-SP-2016"
+            },
+            {
+              "code": "4.3.3.2",
+              "statement": "pV = constant for fixed mass at constant temperature; explain pressure and volume changes.",
+              "keywords": ["pressure", "volume", "pV", "constant temperature"],
+              "AO": "AO2",
+              "source": "AQA-8463-SP-2016"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

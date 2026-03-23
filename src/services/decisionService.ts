@@ -95,10 +95,10 @@ export interface StudentProfileContext {
   targetExamDate?: string | null;
 }
 
-function filterSkillsBySubjects(
-  skills: { id: string; topic: string }[],
+function filterSkillsBySubjects<T extends { id: string; topic: string }>(
+  skills: T[],
   subjects: string[]
-): typeof skills {
+): T[] {
   if (!subjects?.length) return skills;
   const subjectSet = new Set(subjects.map((s) => s.toLowerCase().trim()));
   return skills.filter((skill) => {

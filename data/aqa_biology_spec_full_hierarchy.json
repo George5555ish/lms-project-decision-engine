@@ -1,0 +1,539 @@
+{
+  "examBoard": "AQA",
+  "qualification": "GCSE",
+  "subject": "Biology",
+  "source_file": "AQA-8461-SP-2016.pdf",
+  "source_citation": "fileciteturn2file0",
+  "topics": [
+    {
+      "topicName": "Cell Biology",
+      "topicCode": "4.1",
+      "overview": "Cells are the basic unit of life; includes cell structure, division, transport and microscopy.",
+      "subtopics": [
+        {
+          "subtopicName": "Cell structure",
+          "specPoints": [
+            {
+              "code": "4.1.1.1",
+              "statement": "Describe differences between eukaryotic and prokaryotic cells.",
+              "keywords": [
+                "eukaryote",
+                "prokaryote",
+                "nucleus",
+                "plasmid"
+              ],
+              "AO": "AO1",
+              "source": "fileciteturn2file4"
+            },
+            {
+              "code": "4.1.1.3",
+              "statement": "Explain how the structure of different types of cell relate to their function (specialisation).",
+              "keywords": [
+                "specialised",
+                "function",
+                "sperm cell",
+                "root hair cell",
+                "xylem"
+              ],
+              "AO": "AO2",
+              "source": "fileciteturn2file0"
+            },
+            {
+              "code": "4.1.1.5",
+              "statement": "Understand microscopy development and differences in magnification and resolution.",
+              "keywords": [
+                "microscopy",
+                "magnification",
+                "resolution",
+                "electron microscope",
+                "light microscope"
+              ],
+              "AO": "AO1",
+              "source": "fileciteturn2file0"
+            }
+          ]
+        },
+        {
+          "subtopicName": "Cell division",
+          "specPoints": [
+            {
+              "code": "4.1.2.1",
+              "statement": "Describe chromosomes and that they are made of DNA; chromosomes in body cells are normally in pairs.",
+              "keywords": [
+                "chromosome",
+                "DNA",
+                "gene",
+                "pair"
+              ],
+              "AO": "AO1",
+              "source": "fileciteturn2file14"
+            },
+            {
+              "code": "4.1.2.2",
+              "statement": "Understand the cell cycle and mitosis; students need to describe stages and recognise contexts where mitosis is occurring.",
+              "keywords": [
+                "mitosis",
+                "cell cycle",
+                "replication"
+              ],
+              "AO": "AO1",
+              "source": "fileciteturn2file14"
+            },
+            {
+              "code": "4.1.2.3",
+              "statement": "Explain the importance of stem cells and differentiation.",
+              "keywords": [
+                "stem cell",
+                "differentiate",
+                "meristem",
+                "therapeutic cloning"
+              ],
+              "AO": "AO2",
+              "source": "fileciteturn2file14"
+            }
+          ]
+        },
+        {
+          "subtopicName": "Transport in cells",
+          "specPoints": [
+            {
+              "code": "4.1.3.1",
+              "statement": "Describe diffusion as movement of substances into and out of cells.",
+              "keywords": [
+                "diffusion",
+                "concentration gradient",
+                "passive"
+              ],
+              "AO": "AO1",
+              "source": "fileciteturn2file15"
+            },
+            {
+              "code": "4.1.3.2",
+              "statement": "Explain osmosis and required practical investigating concentrations on plant tissue mass.",
+              "keywords": [
+                "osmosis",
+                "partially permeable membrane",
+                "water potential"
+              ],
+              "AO": "AO2",
+              "source": "fileciteturn2file15"
+            },
+            {
+              "code": "4.1.3.3",
+              "statement": "Describe active transport and its role in root hair ion uptake and gut sugar absorption.",
+              "keywords": [
+                "active transport",
+                "energy",
+                "root hair",
+                "gut"
+              ],
+              "AO": "AO2",
+              "source": "fileciteturn2file15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topicName": "Organisation",
+      "topicCode": "4.2",
+      "overview": "Tissues, organs and organ systems; digestion, circulation, gas exchange and plant transport.",
+      "subtopics": [
+        {
+          "subtopicName": "Principles of organisation",
+          "specPoints": [
+            {
+              "code": "4.2.1",
+              "statement": "Understand cells, tissues, organs and organ systems, size and scale, and their organisation.",
+              "keywords": [
+                "tissue",
+                "organ",
+                "organ system",
+                "scale"
+              ],
+              "AO": "AO1",
+              "source": "fileciteturn2file6"
+            }
+          ]
+        },
+        {
+          "subtopicName": "Human digestive system and enzymes",
+          "specPoints": [
+            {
+              "code": "4.2.2.1",
+              "statement": "Describe the human digestive system; relate enzymes to metabolism; recall sites of production and action of amylase, proteases and lipases.",
+              "keywords": [
+                "enzyme",
+                "amylase",
+                "protease",
+                "lipase",
+                "lock and key"
+              ],
+              "AO": "AO1",
+              "source": "fileciteturn2file6"
+            }
+          ]
+        },
+        {
+          "subtopicName": "Gas exchange and circulation",
+          "specPoints": [
+            {
+              "code": "4.2.3",
+              "statement": "Describe gas exchange surfaces (alveoli) and circulatory system including heart structure and blood components.",
+              "keywords": [
+                "alveoli",
+                "capillary",
+                "artery",
+                "vein",
+                "heart",
+                "blood"
+              ],
+              "AO": "AO1",
+              "source": "fileciteturn2file6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topicName": "Infection and response",
+      "topicCode": "4.3",
+      "overview": "Pathogens, immune response, vaccinations, antibiotics and drug development.",
+      "subtopics": [
+        {
+          "subtopicName": "Pathogens and disease",
+          "specPoints": [
+            {
+              "code": "4.3.1",
+              "statement": "Describe viruses, bacteria, fungi and protists as pathogens and how they cause disease.",
+              "keywords": [
+                "virus",
+                "bacteria",
+                "fungi",
+                "protist",
+                "pathogen"
+              ],
+              "AO": "AO1",
+              "source": "fileciteturn2file3"
+            }
+          ]
+        },
+        {
+          "subtopicName": "Immune response and vaccination",
+          "specPoints": [
+            {
+              "code": "4.3.2",
+              "statement": "Explain immune system actions including antibodies, antitoxins and the role of vaccination; understand antibiotic resistance.",
+              "keywords": [
+                "antibody",
+                "vaccination",
+                "antibiotic resistance",
+                "antitoxin"
+              ],
+              "AO": "AO2",
+              "source": "fileciteturn2file3"
+            }
+          ]
+        },
+        {
+          "subtopicName": "Monoclonal antibodies and drug development",
+          "specPoints": [
+            {
+              "code": "4.3.3",
+              "statement": "Understand monoclonal antibodies and basics of drug discovery and trials.",
+              "keywords": [
+                "monoclonal antibody",
+                "clinical trial",
+                "placebo"
+              ],
+              "AO": "AO2",
+              "source": "fileciteturn2file3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topicName": "Bioenergetics",
+      "topicCode": "4.4",
+      "overview": "Photosynthesis, respiration, metabolism and limiting factors.",
+      "subtopics": [
+        {
+          "subtopicName": "Photosynthesis",
+          "specPoints": [
+            {
+              "code": "4.4.1",
+              "statement": "Describe photosynthesis equation and factors affecting rate of photosynthesis.",
+              "keywords": [
+                "photosynthesis",
+                "light intensity",
+                "carbon dioxide",
+                "chlorophyll"
+              ],
+              "AO": "AO1",
+              "source": "fileciteturn2file3"
+            }
+          ]
+        },
+        {
+          "subtopicName": "Respiration",
+          "specPoints": [
+            {
+              "code": "4.4.2",
+              "statement": "Distinguish between aerobic and anaerobic respiration and understand metabolism.",
+              "keywords": [
+                "aerobic",
+                "anaerobic",
+                "respiration",
+                "ATP"
+              ],
+              "AO": "AO1",
+              "source": "fileciteturn2file3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topicName": "Homeostasis and response",
+      "topicCode": "4.5",
+      "overview": "Nervous and hormonal coordination, blood glucose control, thermoregulation and plant hormones.",
+      "subtopics": [
+        {
+          "subtopicName": "Nervous system",
+          "specPoints": [
+            {
+              "code": "4.5.1",
+              "statement": "Describe structure and function of the nervous system and reflex arcs.",
+              "keywords": [
+                "neurone",
+                "synapse",
+                "reflex arc"
+              ],
+              "AO": "AO1",
+              "source": "fileciteturn2file3"
+            }
+          ]
+        },
+        {
+          "subtopicName": "Hormonal control",
+          "specPoints": [
+            {
+              "code": "4.5.2",
+              "statement": "Explain hormonal control including the menstrual cycle, insulin/glucagon and plant hormones.",
+              "keywords": [
+                "insulin",
+                "glucagon",
+                "FSH",
+                "LH",
+                "auxin"
+              ],
+              "AO": "AO2",
+              "source": "fileciteturn2file3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topicName": "Inheritance, variation and evolution",
+      "topicCode": "4.6",
+      "overview": "DNA, genes, inheritance, selection, genetic engineering and classification.",
+      "subtopics": [
+        {
+          "subtopicName": "Genetics and DNA",
+          "specPoints": [
+            {
+              "code": "4.6.1.1",
+              "statement": "Describe DNA structure, genome and gene function; understand bases A, C, G, T.",
+              "keywords": [
+                "DNA",
+                "gene",
+                "genome",
+                "base"
+              ],
+              "AO": "AO1",
+              "source": "fileciteturn2file17"
+            },
+            {
+              "code": "4.6.1.2",
+              "statement": "Explain meiosis and its role in producing gametes and genetic variation.",
+              "keywords": [
+                "meiosis",
+                "gamete",
+                "fertilisation",
+                "variation"
+              ],
+              "AO": "AO1",
+              "source": "fileciteturn2file19"
+            }
+          ]
+        },
+        {
+          "subtopicName": "Evolution and classification",
+          "specPoints": [
+            {
+              "code": "4.6.4",
+              "statement": "Understand classification systems (Linnaean and three-domain) and evolutionary trees.",
+              "keywords": [
+                "classification",
+                "binomial",
+                "domain",
+                "evolutionary tree"
+              ],
+              "AO": "AO2",
+              "source": "fileciteturn2file17"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topicName": "Ecology",
+      "topicCode": "4.7",
+      "overview": "Ecosystems, energy flow, sampling, biodiversity, cycles and human impact.",
+      "subtopics": [
+        {
+          "subtopicName": "Adaptations and communities",
+          "specPoints": [
+            {
+              "code": "4.7.1.1",
+              "statement": "Describe adaptations, interdependence and competition in communities.",
+              "keywords": [
+                "adaptation",
+                "competition",
+                "interdependence",
+                "extremophile"
+              ],
+              "AO": "AO1",
+              "source": "fileciteturn2file8"
+            }
+          ]
+        },
+        {
+          "subtopicName": "Sampling and population",
+          "specPoints": [
+            {
+              "code": "4.7.2.1",
+              "statement": "Use transects and quadrats to measure distribution and abundance; statistical terms mean, mode, median.",
+              "keywords": [
+                "transect",
+                "quadrat",
+                "mean",
+                "median",
+                "mode"
+              ],
+              "AO": "AO2",
+              "source": "fileciteturn2file8"
+            }
+          ]
+        },
+        {
+          "subtopicName": "Biogeochemical cycles",
+          "specPoints": [
+            {
+              "code": "4.7.2.2",
+              "statement": "Explain how carbon and water cycle through biotic and abiotic components of ecosystems.",
+              "keywords": [
+                "carbon cycle",
+                "water cycle",
+                "photosynthesis",
+                "respiration"
+              ],
+              "AO": "AO1",
+              "source": "fileciteturn2file8"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topicName": "Working Scientifically & Required Practicals",
+      "topicCode": "3 & 8",
+      "overview": "Practical skills, mathematical requirements and 10 required practical activities.",
+      "subtopics": [
+        {
+          "subtopicName": "Working Scientifically",
+          "specPoints": [
+            {
+              "code": "3.WS",
+              "statement": "Develop scientific thinking, models, hypothesis testing, interpretation of data and use of mathematics.",
+              "keywords": [
+                "hypothesis",
+                "model",
+                "graph",
+                "mean",
+                "significant figures"
+              ],
+              "AO": "AO3",
+              "source": "fileciteturn2file3"
+            }
+          ]
+        },
+        {
+          "subtopicName": "Required Practicals (selected)",
+          "specPoints": [
+            {
+              "code": "8.2.1",
+              "statement": "Required practical 1: Use a light microscope to observe, draw and label plant and animal cells.",
+              "keywords": [
+                "microscope",
+                "drawing",
+                "magnification scale"
+              ],
+              "AO": "AO2",
+              "source": "fileciteturn2file9"
+            },
+            {
+              "code": "8.2.3",
+              "statement": "Required practical 3: Investigate effect of concentrations of salt or sugar solutions on mass of plant tissue (osmosis).",
+              "keywords": [
+                "osmosis",
+                "mass",
+                "percentage gain/loss"
+              ],
+              "AO": "AO2",
+              "source": "fileciteturn2file2"
+            },
+            {
+              "code": "8.2.10",
+              "statement": "Required practical 10 (biology only): Investigate effect of temperature on rate of decay of fresh milk by measuring pH change.",
+              "keywords": [
+                "decay",
+                "pH",
+                "rate"
+              ],
+              "AO": "AO2",
+              "source": "fileciteturn2file5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topicName": "Key Ideas",
+      "topicCode": "4.8",
+      "overview": "Fundamental biological concepts that underpin the specification.",
+      "subtopics": [
+        {
+          "subtopicName": "Fundamental concepts",
+          "specPoints": [
+            {
+              "code": "4.8.1",
+              "statement": "Key ideas: molecules structure-function, cells as units of life, ecosystems and cycles, evolution by natural selection.",
+              "keywords": [
+                "structure-function",
+                "ecosystem",
+                "evolution",
+                "photosynthesis",
+                "respiration"
+              ],
+              "AO": "AO1",
+              "source": "fileciteturn2file12"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

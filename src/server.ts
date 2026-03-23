@@ -52,9 +52,10 @@ async function start() {
     res.status(500).json({ error: message });
   });
 
-  app.listen(config.port, () => {
+  const host = process.env.HOST || '0.0.0.0';
+  app.listen(config.port, host, () => {
     // eslint-disable-next-line no-console
-    console.log(`[decision-engine] Listening on port ${config.port}`);
+    console.log(`[decision-engine] Listening on ${host}:${config.port}`);
   });
 }
 
