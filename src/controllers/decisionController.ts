@@ -3,15 +3,19 @@ import { getNextQuestionDecision, updateStudentKnowledge } from '../services/dec
 
 export async function postNextQuestion(req: Request, res: Response): Promise<void> {
   try {
-    const { studentId, studentProfile } = req.body;
+    const { studentId, studentProfile, subjects } = req.body;
     // eslint-disable-next-line no-console
-    console.log('[decision-engine] /next-question studentId:', studentId ? String(studentId) : null);
+    console.log('[decision-engine] /next-question studentId:', studentId ? String(studentId) : null, 'subjects:', subjects);
     if (!studentId || typeof studentId !== 'string') {
       res.status(400).json({ error: 'studentId is required' });
       return;
     }
+    // Use top-level subjects (e.g. from mock test) when provided; otherwise use profile
+    const profileToUse = subjects?.length
+      ? { ...studentProfile, subjects: Array.isArray(subjects) ? subjects : [subjects] }
+      : studentProfile;
 
-    const decision = await getNextQuestionDecision(studentId, studentProfile);
+    const decision = await getNextQuestionDecision(studentId, profileToUse);
     res.json(decision);
   } catch (err: any) {
     // eslint-disable-next-line no-console
