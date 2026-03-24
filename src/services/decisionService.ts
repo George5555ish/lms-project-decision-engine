@@ -14,6 +14,8 @@ export interface NextQuestionDecision {
   aoLevel: AoLevel;
   difficulty: number; // 1–5
   questionType: QuestionType;
+  /** For AO3 mock test: prefer 'bar_chart' or 'line_graph' to vary diagram types */
+  preferredDiagramType?: 'bar_chart' | 'line_graph';
 }
 
 interface UpdatePayload {
@@ -124,9 +126,13 @@ function pickAoFromDistribution(target: {
   return 'AO3';
 }
 
+/** Mixed AO pattern for mock tests: [AO1, AO3, AO2, AO3] repeated. Top 3 topics only. */
+const MOCK_TEST_AO_PATTERN: AoLevel[] = ['AO1', 'AO3', 'AO2', 'AO3'];
+
 export async function getNextQuestionDecision(
   studentId: string,
-  studentProfile?: StudentProfileContext | null
+  studentProfile?: StudentProfileContext | null,
+  mockTestQuestionIndex?: number
 ): Promise<NextQuestionDecision> {
   const student = await getOrCreateStudent(studentId);
   let skills = loadSkills();
@@ -201,48 +207,58 @@ export async function getNextQuestionDecision(
 
   const pKnow = bestSkill.pKnow;
 
-  // Difficulty + AO mapping: use profile's aoDistributionTarget when available, else mastery-based
   let difficulty: number;
   let aoLevel: AoLevel;
+  let preferredDiagramType: 'bar_chart' | 'line_graph' | undefined;
 
-  const aoTarget = studentProfile?.aoDistributionTarget;
-  if (aoTarget && (aoTarget.AO1 || aoTarget.AO2 || aoTarget.AO3)) {
-    aoLevel = pickAoFromDistribution(aoTarget);
-    // Difficulty aligned with AO: AO1 easier, AO3 harder
+  // Mock test mode: use mixed AO pattern (AO1, AO3, AO2, AO3) + alternate bar/line for AO3
+  if (typeof mockTestQuestionIndex === 'number') {
+    aoLevel = MOCK_TEST_AO_PATTERN[mockTestQuestionIndex % MOCK_TEST_AO_PATTERN.length];
     if (aoLevel === 'AO1') difficulty = 1 + Math.floor(Math.random() * 2);
     else if (aoLevel === 'AO2') difficulty = 2 + Math.floor(Math.random() * 2);
-    else difficulty = 3 + Math.floor(Math.random() * 3);
+    else difficulty = 3 + Math.floor(Math.random() * 2);
+    // Alternate bar_chart and line_graph for AO3
+    if (aoLevel === 'AO3') {
+      const rem = mockTestQuestionIndex % 4;
+      const ao3BeforeThis = Math.floor(mockTestQuestionIndex / 4) * 2 + (rem >= 2 ? 1 : 0);
+      preferredDiagramType = ao3BeforeThis % 2 === 0 ? 'bar_chart' : 'line_graph';
+    }
   } else {
-    // Fallback: mastery-based AO selection
-    if (pKnow < 0.4) {
-      difficulty = 1 + Math.floor(Math.random() * 2);
-      aoLevel = 'AO1';
-    } else if (pKnow < 0.7) {
-      difficulty = 2 + Math.floor(Math.random() * 2);
-      aoLevel = Math.random() < 0.5 ? 'AO1' : 'AO2';
+    // Standard mode: use profile or mastery-based AO
+    const questionsSoFar = student.totalQuestionsAsked;
+    const aoTarget = studentProfile?.aoDistributionTarget;
+    if (aoTarget && (aoTarget.AO1 || aoTarget.AO2 || aoTarget.AO3)) {
+      aoLevel = pickAoFromDistribution(aoTarget);
+      if (aoLevel === 'AO1') difficulty = 1 + Math.floor(Math.random() * 2);
+      else if (aoLevel === 'AO2') difficulty = 2 + Math.floor(Math.random() * 2);
+      else difficulty = 3 + Math.floor(Math.random() * 3);
     } else {
-      difficulty = 3 + Math.floor(Math.random() * 3);
-      aoLevel = Math.random() < 0.5 ? 'AO2' : 'AO3';
+      if (pKnow < 0.4) {
+        difficulty = 1 + Math.floor(Math.random() * 2);
+        aoLevel = 'AO1';
+      } else if (pKnow < 0.7) {
+        difficulty = 2 + Math.floor(Math.random() * 2);
+        aoLevel = Math.random() < 0.5 ? 'AO1' : 'AO2';
+      } else {
+        difficulty = 3 + Math.floor(Math.random() * 3);
+        aoLevel = Math.random() < 0.5 ? 'AO2' : 'AO3';
+      }
+    }
+    const shouldForceAo3 = (questionsSoFar + 1) % 5 === 0;
+    if (shouldForceAo3) {
+      aoLevel = 'AO3';
+      if (difficulty < 3) difficulty = 3;
     }
   }
 
-  // Inject challenge: every 5th question force AO3 where possible (unless profile overrides).
   const questionsSoFar = student.totalQuestionsAsked;
-  const shouldForceAo3 = (questionsSoFar + 1) % 5 === 0;
-  if (shouldForceAo3) {
-    aoLevel = 'AO3';
-    if (difficulty < 3) difficulty = 3;
-  }
-
-  // Rotate question types based on totalQuestionsAsked
   const types: QuestionType[] = ['retrieval', 'procedural', 'multi-step', 'exam-style'];
   const questionType = types[questionsSoFar % types.length];
 
-  // Bump totalQuestionsAsked; actual answer logging will happen via /update
   student.totalQuestionsAsked += 1;
   await student.save();
 
-  return {
+  const result: NextQuestionDecision = {
     topic: skillConfig.topic,
     skill: skillConfig.name,
     skillId: skillConfig.id,
@@ -250,5 +266,7 @@ export async function getNextQuestionDecision(
     difficulty,
     questionType
   };
+  if (preferredDiagramType) result.preferredDiagramType = preferredDiagramType;
+  return result;
 }
 

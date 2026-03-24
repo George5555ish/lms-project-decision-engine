@@ -3,9 +3,9 @@ import { getNextQuestionDecision, updateStudentKnowledge } from '../services/dec
 
 export async function postNextQuestion(req: Request, res: Response): Promise<void> {
   try {
-    const { studentId, studentProfile, subjects } = req.body;
+    const { studentId, studentProfile, subjects, questionsSoFar } = req.body;
     // eslint-disable-next-line no-console
-    console.log('[decision-engine] /next-question studentId:', studentId ? String(studentId) : null, 'subjects:', subjects);
+    console.log('[decision-engine] /next-question studentId:', studentId ? String(studentId) : null, 'subjects:', subjects, 'questionsSoFar:', questionsSoFar);
     if (!studentId || typeof studentId !== 'string') {
       res.status(400).json({ error: 'studentId is required' });
       return;
@@ -15,7 +15,7 @@ export async function postNextQuestion(req: Request, res: Response): Promise<voi
       ? { ...studentProfile, subjects: Array.isArray(subjects) ? subjects : [subjects] }
       : studentProfile;
 
-    const decision = await getNextQuestionDecision(studentId, profileToUse);
+    const decision = await getNextQuestionDecision(studentId, profileToUse, questionsSoFar);
     res.json(decision);
   } catch (err: any) {
     // eslint-disable-next-line no-console
